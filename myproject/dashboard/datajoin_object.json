@@ -1,0 +1,83 @@
+[
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-18",
+        "ActualValue": 254.9090118408203
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-17",
+        "ActualValue": 235.0122833251953
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-08-03",
+        "ActualValue": 256.697509765625
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-28",
+        "ActualValue": 247.7678680419922
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-30",
+        "ActualValue": 244.7239990234375
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-31",
+        "ActualValue": 237.2451171875
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-07-29",
+        "ActualValue": 253.82997131347656
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-08-01",
+        "ActualValue": 251.583740234375
+    },
+    {
+        "ID": 116,
+        "PointName": "U-06.MDB-08_HDA_GIMINI-4 Block Demand Real Power",
+        "UnitName": "VAR",
+        "Operation": "Drive",
+        "Type": "PME",
+        "Date": "2020-08-02",
+        "ActualValue": 252.1002197265625
+    }
+]

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+  <title>Electrical Analysis System</title>
+  {% load static %}
+  <link rel="icon" href="http://10.7.117.5/power/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{% static 'stylesheet/template.css' %}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+      
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" style="position: fixed !important;width: 15%;height: 100vh !important;">
+        <ul class="nav">
+            <li class="nav-item nav-category">
+                <span class="nav-link">Seagate Technology</span>
+            </li>
+            <li class="nav-item nav-category">
+                <a class="nav-link" href="/home/">
+                    <span class="menu-title">Dashboard</span>
+                    <i class="icon-screen-desktop menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="consumption" href="/consumptionAnalysis/" >
+                    <span class="menu-title">Analysis Consumption</span>
+                    <i class="icon-layers menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" id="PowerHistory" href="/PowerHistory/">
+                    <span class="menu-title">Power History</span>
+                    <i class="icon-layers menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                    aria-controls="ui-basic">
+                    <span class="menu-title">Budget Summary</span>
+                    <i class="icon-layers menu-icon"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+      <!-- partial -->
+      <div class="main-panel" style="margin-left: 15%;">
+        <div class="content-wrapper">
+          <div class="container-date-picker">
+            <form method="POST" id="date-picker-form">
+              {% csrf_token %}
+              <label id="datepicker" for="dateofbirth" style="font-size: 18px; color: black;">SELECT DATE</label>
+              <select id="chosen-date1" class="chosen-date" type="text" name="select" style="width: 15%">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+
+              </select>
+              <input type="date" name="date1" id="date1" />
+              <input type="date" name="date2" id="date2" />
+              <button class="button1" id="button1" type="submit" name="date">
+                submit
+              </button>
+            </form>
+            <form method="POST" id="set-guideline">
+              {% csrf_token %}
+              <label id="datepicker" for="dateofbirth" style="font-size: 18px; color: black;">SET GUIDELINE</label>
+              <input type="number" name="guideline" id="guideline" placeholder="set guideline" />
+              <button class="button2" id="button2" type="submit" name="check">set</button>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <section class="chart-container">
+                    <!--------------------highcharts Pie schart Information----------------------------->
+                    <figure class="highcharts-figure">
+                      <div id="container-pie"></div>
+                    </figure>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body performane-indicator-card">
+                  <figure class="highcharts-figure-column">
+                    <div id="container-column"></div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!----------ADD NEW ROW (2020-08-23)------------->
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="card" id="report-summary">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="d-sm-flex align-items-baseline report-summary-header" id="report-summary-text">
+                        <h5 class="font-weight-semibold" id="report">Report Summary</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row report-inner-cards-wrapper" id="report-summary-items">
+                    <div class=" col-md -6 col-xl report-inner-card">
+                      <div class="inner-card-text">
+                        <span class="report-title" style="font-size: 14px;">Overall Average</span>
+                        <br>
+                        <h5 style="margin-top: 10px;" id="overall"></h5>
+                        <span class="report-count"></span>
+                      </div>
+                      <div class="inner-card-icon bg-success">
+                        <i class="icon-rocket"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                      <div class="inner-card-text">
+                        <span class="report-title" style="font-size: 14px;">Common Average</span>
+                        <h5 style="margin-top: 10px;" id="common"></h5>
+                        <span class="report-count"></span>
+                      </div>
+                      <div class="inner-card-icon bg-danger">
+                        <i class="icon-briefcase"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                      <div class="inner-card-text">
+                        <span class="report-title" style="font-size: 14px;">Fix Average</span>
+                        <h5 style="margin-top: 10px;" id="fix"></h>
+                        <span class="report-count"></span>
+                      </div>
+                      <div class="inner-card-icon bg-warning">
+                        <i class="icon-globe-alt"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                      <div class="inner-card-text">
+                        <span class="report-title" style="font-size: 14px;">Var Average</span>
+                        <h5 style="margin-top: 10px;" id="var"></h5>
+                        <span class="report-count"></span>
+                      </div>
+                      <div class="inner-card-icon bg-primary">
+                        <i class="icon-diamond"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+</body>
+
+<!-------------------------JAVASCRIPTS---------------------------------------->
+
+<script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+{% load static %}
+<script src="{% static 'Javascripts/style.js' %}" />
+</script>
+
+</html>

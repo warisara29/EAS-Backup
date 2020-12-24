@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" integrity="sha512-1sLg2zcT3n7osSBWgWwaLYULxlCxQ8ReyS+8QvjyhF8YxrESmO+yjB59f3sNLLN022lg1X2PMckOlXkMQfYoGA==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+        integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg=="
+        crossorigin="anonymous" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://kit.fontawesome.com/c78121cbbe.js" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
+        integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"
+        integrity="sha512-eSeh0V+8U3qoxFnK3KgBsM69hrMOGMBy3CNxq/T4BArsSQJfKVsKb5joMqIPrNMjRQSTl4xG8oJRpgU2o9I7HQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+        integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw=="
+        crossorigin="anonymous" />
+
+
+    <!-- multi table -->
+    <link href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+    <!-- ///////////////////////////////////// -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <title>Electrical Analysis System</title>
+    {% load static %}
+    <link rel="icon" href="http://10.7.117.5/power/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'stylesheet/consumtionAnalysis.css' %}" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar"
+                style="position: fixed !important; width: 15%; height: 100vh !important;">
+                <ul class="nav">
+                    <li class="nav-item nav-category">
+                        <span class="nav-link">Seagate Technology</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/home/">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="icon-screen-desktop menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">
+                        <a class="nav-link" id="consumption" href="/consumptionAnalysis/">
+                            <span class="menu-title">Analysis Consumption</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="PowerHistory" href="/PowerHistory/">
+                            <span class="menu-title">Power History</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <span class="menu-title">Budget Summary</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- main-panel ends -->
+            <!----------------FORM------------------->
+            <div class="main-panel" style="margin-left: 15%;">
+                <div class="content-wrapper">
+                    <!-- content-wrapper ends -->
+                    <!-- partial:partials/_footer.html -->
+
+                    <!-- partial -->
+                </div>
+                <!-- page-body-wrapper ends -->
+
+                <div class="container center" style="width: 100%; ">
+                    <div class="card" style="width: 100%;">
+                        <div class="container-date-picker" style="margin-bottom: 20px;">
+                            <form method="POST" id="date-picker-form">
+                                {% csrf_token %}
+                                <label id="datepicker" for="dateofbirth" style="font-size: 18px;color: black;">SELECT
+                                    DATE</label>
+                                <select id="chosen-date" class="chosen-date" type="text" style="width: 15%"
+                                    onchange="Chosen_date()">
+                                    <option>Daily</option>
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+    
+                                </select>
+    
+                                <input type="date" name="date1" id="date1" />
+                                <input type="date" name="date2" id="date2" />
+                                <input type="date" name="week1" id="week1" />
+                                <input type="date" name="week2" id="week2" />
+                                <input type="date" name="month1" id="month1" />
+                                <input type="date" name="month2" id="month2" />
+    
+                                <button class="button1" id="button1" type="submit" name="date">
+                                    submit
+                                </button>
+                            </form>
+                        </div>
+                        <br>
+                        <h4 style="margin-top: 10px; text-align: right;">Consumption Overall</h4>
+                        <hr />
+                        <div class="row">
+                            <section>
+                                <div id="table-scroll" class="table-scroll">
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="consumption_OP" class="container center" style="width: 100%; ">
+                    <div class="card" style="width: 100%;">
+                        <h4 style="margin-top: 30px; text-align: right;">Consumtion Operations</h4>
+                        <hr />
+                        <div class="row">
+                            <section >
+                                <div>
+                                    <div class="card-header">
+                                        <ul class="nav nav-tabs card-header-tabs" id="ul-tab">
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="table-scroll" class="table-scroll">
+                                            <!-- <div style="margin: 10px;" id="system-table"> -->
+                                                <table class="table table-bordered" id="drive-fix">
+                                                    <thead>
+                                                        <tr id="th-date">
+                                                        </tr>
+                                                        <tr id="sub-th">
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="pointname">
+                
+                                                    </tbody>
+                                                </table>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container center" style="width: 100%; ">
+                    <div class="card" style="width: 100%;">
+                        <div class="content-wrapper">
+
+                            <div class="select-option-part">
+                                <label id="datepicker" for="dateofbirth" style="font-size: 18px; color: black;">SELECT
+                                    OPTIONS</label>
+                                <div id="select-option">
+                                    <form id="chart-type" method="POST">
+                                        {% csrf_token %}
+                                        <!-- <label id="datepicker" for="dateofbirth" style="font-size: 18px;">SELECT DATE</label> -->
+                                        <input type="date" name="dateRawGraph1" id="dateRawGraph1" />
+                                        <input type="date" name="dateRawGraph2" id="dateRawGraph2" />
+                                        <br><br><select id="chosen-value-operation" class="chosen-value-operation"
+                                            name="chosen-value-operation" type="text" value="Operation" placeholder="Operation"
+                                            onchange="SelectOperation(this)">
+                                            <option>Select Operation</option>
+                                        </select>
+        
+                                        <select id="chosen-value-systems" class="chosen-value-systems" type="text"
+                                            value="Operation" placeholder="Operation" onchange="SelectSystem(this)">
+                                            <option>Select System</option>
+        
+                                        </select>
+        
+                                        <select id="chosen-value-point" class="chosen-value-point" type="text" value='Utility'
+                                            placeholder="Select Point" style="width: 15%" multiple="multiple"
+                                            onchange="SelectPoint(this)">
+                                            <!-- <option>Select Utility</option> -->
+                                            <optgroup label="Group Name">
+        
+                                            </optgroup>
+        
+                                        </select>
+        
+                                        <!-- <div class="selectBox" > -->
+                                        <select class="chosen-value-fullpoint" id="chosen-value-fullpoint"
+                                            name="chosen-value-fullpoint" type="text" value="Point" placeholder="Select Point"
+                                            style="width: 25%" multiple="multiple" onchange="SelectFullPoint(this)">
+                                            <!-- <option>Select Point</option> -->
+        
+                                        </select>
+                                        <button class="button1" id="button1" type="submit" name="check">
+                                            plot
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <figure class="highcharts-figure">
+                                <div id="container-chart"></div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="switch-version d-none d-md-block">
+            <a class="switch-to-mdb-jquery" href="/docs/jquery/"><span class="switch-to mdb-jquery active" id="jQuery"></span></a>
+            <a class="switch-to-mdb-angular" href="/docs/angular/"><span class="switch-to mdb-angular " id="Angular"></span></a>
+            <a class="switch-to-mdb-react" href="/docs/react/"><span class="switch-to mdb-react " id="React"></span></a>
+            <a class="switch-to-mdb-vue" href="/docs/vue/"><span class="switch-to mdb-vue " id="Vue"></span></a>
+            <a class="switch-to-mdb-standard" href="/docs/standard/"><span class="switch-to mdb-standard " id="Standard">
+        </div>
+</body>
+
+<!-------------------------JAVASCRIPTS---------------------------------------->
+
+<script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script
+    src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+<script src="http://raw.githubusercontent.com/christianbach/tablesorter/master/jquery.tablesorter.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+    integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+    crossorigin="anonymous"></script>
+
+
+{% load static %}
+<script src="{% static 'Javascripts/consumption.js' %}" />
+</script>
+
+</html>

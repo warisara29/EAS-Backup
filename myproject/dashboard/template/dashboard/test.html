@@ -1,0 +1,5 @@
+<form action="http://127.0.0.1:8000/test/" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <input type="file" name="avatar" accept="image/gif, image/jpeg, image/png">
+    <button type="submit">Upload</button>
+  </form>

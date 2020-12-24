@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" integrity="sha512-1sLg2zcT3n7osSBWgWwaLYULxlCxQ8ReyS+8QvjyhF8YxrESmO+yjB59f3sNLLN022lg1X2PMckOlXkMQfYoGA==" crossorigin="anonymous" /> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css"
+        integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg=="
+        crossorigin="anonymous" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap table
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
+        integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"
+        integrity="sha512-eSeh0V+8U3qoxFnK3KgBsM69hrMOGMBy3CNxq/T4BArsSQJfKVsKb5joMqIPrNMjRQSTl4xG8oJRpgU2o9I7HQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+        integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw=="
+        crossorigin="anonymous" />
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+    <!-- ///////////////////////////////////// -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <title>Electrical Analysis System</title>
+    {% load static %}
+    <link rel="icon" href="http://10.7.117.5/power/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'stylesheet/powerhistory.css' %}" />
+    <link rel="stylesheet" href="{% static 'stylesheet/jquery.dataTables.min.css' %}" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <!-- partial -->
+
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar"
+                style="position: fixed !important;width: 15%;height: 100vh !important;">
+                <ul class="nav">
+                    <li class="nav-item nav-category">
+                        <span class="nav-link">Seagate Technology</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="home" href="/home/">
+                            <span class="menu-title">Dashboard</span>
+                            <i class="icon-screen-desktop menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="consumption" href="/consumptionAnalysis/">
+                            <span class="menu-title">Analysis Consumption</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category">
+                        <a class="nav-link" id="PowerHistory" href="/PowerHistory/">
+                            <span class="menu-title">Power History</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="budgetSummary" href="#ui-basic">
+                            <span class="menu-title">Budget Summary</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- main-panel ends -->
+
+            <!----------------Table Summary------------------->
+
+            <!-- <div style="width: 50px;height: auto;">    
+                <img src="{% static 'storage/test.png' %}">
+            </div> -->
+            <div class="main-panel" style="margin-left: 15%; height: auto;">
+                <div style="width: 100%; height: auto;">
+                    <div>
+                        <p
+                            style="margin-top: 30px; margin-left: 50px; font-size: 22px; color: black; font-weight: bold;">
+                            Korat power fluctuation (Impact production)</p>
+                        <hr style="margin: 30px; width: 100;color: black;border: 1px solid black;">
+                    </div>
+                    <div class="limiter">
+                        <div id="menu" style="display: flex; ">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal" style="margin-left: 5%;">
+                                Add Data
+                            </button>
+                            <button type="button" class="btn btn-primary" style="margin-left: 1%;"
+                                onclick="exportTableToCSV('summary_ImpactProduction.csv')">
+                                CSV
+                            </button>
+                        </div>
+                        <div class="container-table100" id="container-table100">
+
+                            <!-- Table 1 -->
+                            <div class="wrap-table100" id="wrap-table100">
+                                <table class="table table-hover" id="summary_table" data-toggle="table"
+                                    data-search="true">
+                                    <thead class="thead-dark">
+                                        <tr style="background: black; color: white;">
+                                            <th>Year</th>
+                                            <th>Internal</th>
+                                            <th>External</th>
+                                            <th>Total Impact</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Detail -->
+                    <div id="detailText" style="visibility: show;">
+                        <p id="textDetail"
+                            style="margin-top: 30px; margin-left: 50px; font-size: 22px; color: black; font-weight: bold;"
+                            onclick="closeTable()">
+
+                            <hr style="margin: 30px; width: 100;color: black;border: 1px solid black;">
+                    </div>
+                    <div class="limiter" id="detailData" style="visibility: show;">
+                        <div id="menu" style="display: flex;">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal" style="margin-left: 5%;">
+                                Add Data
+                            </button>
+                            <button type="button" class="btn btn-primary" style="margin-left: 1%;"
+                                onclick="exportTableToCSV2('Korat_power_fluctuation.csv')">
+                                CSV
+                            </button>
+                            <form class="form-inline" style="margin-left:50%; width: 250;">
+                                <input class="form-control mr-sm-2" id="inputSearch" onkeyup="Search()" type="search"
+                                    placeholder="Search by date" aria-label="Search">
+                            </form>
+                        </div>
+                        <div class="container-table100" id="container-table100">
+                            <!-- Table 2  -->
+                            <div class="wrap-table100" id="wrap-table100">
+                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                    <table class="table table-striped table-bordered table-hover" id="detail_table"
+                                        data-toggle="detail_table" data-height="460" data-search="true"
+                                        data-side-pagination="server" data-pagination="true" data-show-columns="true">
+                                        <thead class="thead-dark" style="text-align: left;">
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Duration</th>
+                                                <th>Voltage</th>
+                                                <th>Sag (%)</th>
+                                                <th>Impact</th>
+                                                <th>Impact Production</th>
+                                                <th>Root Cause</th>
+                                                <th>File</th>
+                                                <th>Image</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- Modal For Files -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="filesModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="modalFiles-body">
+                                    <!-- Add Files or Photo here -->
+                                    <p id="files"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Add Main Accident -->
+                                    <form id="modal-form" action="http://127.0.0.1:8000/PowerHistory/"
+                                        enctype="multipart/form-data" method="POST">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Date</label>
+                                            <input type="date" class="form-control" id="formGroupExampleInput1"
+                                                name="Date" placeholder="Example input" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Impact</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                                                name="Impact" placeholder="Impact or Not Impact" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Impact Production</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput3"
+                                                name="ImpactProduction" placeholder="Yes or No" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <label for="formGroupExampleInput">Impact to Plant</label>
+                                                    <select id="select" class="form-control" name="ImpactValue"
+                                                        required>
+                                                        <option disabled selected>Yes/No</option>
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="formGroupExampleInput">Place Cause</label>
+                                                    <select id="select" class="form-control" name="PlaceCause" required>
+                                                        <option disabled selected>Internal/External</option>
+                                                        <option>Internal</option>
+                                                        <option>External</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Root Cause</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                name="RootCause" rows="5"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Insert By</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput2"
+                                                name="InsertBy" placeholder="Name or GID" required>
+                                        </div>
+                                        <!-- Add Detail -->
+                                        <div class="form-group">
+                                            <p>
+                                                <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                                    data-target="#collapseExample" aria-expanded="false"
+                                                    aria-controls="collapseExample">
+                                                    Add Detail
+                                                </button>
+                                            <p>click "Add Detail" for more detail Ex. Time, Duration,etc...</p>
+                                            </p>
+                                            <div class="collapse" id="collapseExample">
+                                                <div class="form-group" id="detail1">
+                                                    <label for="exampleFormControlTextarea1">Time</label>
+                                                    <input type="time" class="form-control" id="formGroupExampleInput"
+                                                        name="time1" placeholder="Impact or Not Impact">
+                                                </div>
+                                                <div class="form-group" id="detail2">
+                                                    <label for="formGroupExampleInput">Duration</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                                        name="duration1" placeholder="80mesc/8mins/8hours">
+                                                </div>
+                                                <div class="form-group" id="detail3">
+                                                    <label for="exampleFormControlTextarea1">Voltage</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                                        name="voltage1" placeholder="Voltage">
+                                                </div>
+                                                <div class="form-group" id="detail4">
+                                                    <label for="formGroupExampleInput">Sag</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                                        name="sag1" placeholder="Sag ">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Upload file or Pictures</label>
+                                                    <input type="file" class="form-control-file"
+                                                        id="exampleFormControlFile1" name='files1' multiple />
+                                                </div>
+                                                <p>
+                                                    <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                                        data-target="#collapseExample2" aria-expanded="false"
+                                                        aria-controls="collapseExample">
+                                                        Add More Detail
+                                                    </button>
+                                                </p>
+                                                <div class="collapse" id="collapseExample2">
+                                                    <div class="form-group" id="detail1">
+                                                        <label for="exampleFormControlTextarea1">Time</label>
+                                                        <input type="time" class="form-control"
+                                                            id="formGroupExampleInput"
+                                                            placeholder="Impact or Not Impact" name="time2">
+                                                    </div>
+                                                    <div class="form-group" id="detail2">
+                                                        <label for="formGroupExampleInput">Duration</label>
+                                                        <input type="text" class="form-control"
+                                                            id="formGroupExampleInput" placeholder="80mesc/8mins/8hours"
+                                                            name="duration2">
+                                                    </div>
+                                                    <div class="form-group" id="detail3">
+                                                        <label for="exampleFormControlTextarea1">Voltage</label>
+                                                        <input type="text" class="form-control"
+                                                            id="formGroupExampleInput" placeholder="Voltage"
+                                                            name="voltage2">
+                                                    </div>
+                                                    <div class="form-group" id="detail4">
+                                                        <label for="formGroupExampleInput">Sag</label>
+                                                        <input type="text" class="form-control"
+                                                            id="formGroupExampleInput" placeholder="Sag " name="sag2">
+                                                    </div>
+                                                    <div class="form-group" id="detail5">
+                                                        <label for="exampleFormControlFile1">Upload file or
+                                                            Pictures</label>
+                                                        <input type="file" class="form-control-file"
+                                                            id="exampleFormControlFile1" name='files2' multiple />
+                                                    </div>
+                                                    <p>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-toggle="collapse" data-target="#collapseExample3"
+                                                            aria-expanded="false" aria-controls="collapseExample">
+                                                            Add More Detail
+                                                        </button>
+                                                    </p>
+                                                    <div class="collapse" id="collapseExample3">
+                                                        <div class="form-group" id="detail1">
+                                                            <label for="exampleFormControlTextarea1">Time</label>
+                                                            <input type="time" class="form-control"
+                                                                id="formGroupExampleInput"
+                                                                placeholder="Impact or Not Impact" name="time3">
+                                                        </div>
+                                                        <div class="form-group" id="detail2">
+                                                            <label for="formGroupExampleInput">Duration</label>
+                                                            <input type="text" class="form-control"
+                                                                id="formGroupExampleInput"
+                                                                placeholder="80mesc/8mins/8hours" name="duration3">
+                                                        </div>
+                                                        <div class="form-group" id="detail3">
+                                                            <label for="exampleFormControlTextarea1">Voltage</label>
+                                                            <input type="text" class="form-control"
+                                                                id="formGroupExampleInput" placeholder="Voltage"
+                                                                name="voltage3">
+                                                        </div>
+                                                        <div class="form-group" id="detail4">
+                                                            <label for="formGroupExampleInput">Sag</label>
+                                                            <input type="text" class="form-control"
+                                                                id="formGroupExampleInput" placeholder="Sag "
+                                                                name="sag3">
+                                                        </div>
+                                                        <div class="form-group" id="detail5">
+                                                            <label for="exampleFormControlFile1">Upload file or
+                                                                Pictures</label>
+                                                            <input type="file" class="form-control-file"
+                                                                id="exampleFormControlFile1" name='files3' multiple />
+                                                        </div>
+                                                        <p>
+                                                            <button class="btn btn-primary" type="button"
+                                                                data-toggle="collapse" data-target="#collapseExample4"
+                                                                aria-expanded="false" aria-controls="collapseExample">
+                                                                Add More Detail
+                                                            </button>
+                                                        </p>
+                                                        <div class="collapse" id="collapseExample4">
+                                                            <div class="form-group" id="detail1">
+                                                                <label for="exampleFormControlTextarea1">Time</label>
+                                                                <input type="time" class="form-control"
+                                                                    id="formGroupExampleInput"
+                                                                    placeholder="Impact or Not Impact" name="time4">
+                                                            </div>
+                                                            <div class="form-group" id="detail2">
+                                                                <label for="formGroupExampleInput">Duration</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="formGroupExampleInput"
+                                                                    placeholder="80mesc/8mins/8hours" name="duration4">
+                                                            </div>
+                                                            <div class="form-group" id="detail3">
+                                                                <label for="exampleFormControlTextarea1">Voltage</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="formGroupExampleInput" placeholder="Voltage"
+                                                                    name="voltage4">
+                                                            </div>
+                                                            <div class="form-group" id="detail4">
+                                                                <label for="formGroupExampleInput">Sag</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="formGroupExampleInput" placeholder="Sag "
+                                                                    name="sag4">
+                                                            </div>
+                                                            <div class="form-group" id="detail5">
+                                                                <label for="exampleFormControlFile1">Upload file or
+                                                                    Pictures</label>
+                                                                <input type="file" class="form-control-file"
+                                                                    id="exampleFormControlFile1" name='files4'
+                                                                    multiple />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary" id="datail" name="detail">Save
+                                                changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image modal -->
+                    <!-- Large modal -->
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" id="img-modal">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-------------------------JAVASCRIPTS---------------------------------------->
+
+<script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script
+    src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+<!-- <script src="http://raw.githubusercontent.com/christianbach/tablesorter/master/jquery.tablesorter.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+    integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
+    crossorigin="anonymous"></script>
+
+<!-- DATA TABLE -->
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<!-- <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js "></script> -->
+
+{% load static %}
+<script src="{% static 'Javascripts/powerhistory.js' %}" />
+</script>
+
+</html>
